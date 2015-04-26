@@ -1,0 +1,39 @@
+$tablet: "screen and (min-width: 768px) and (max-width: 1023px)";
+$desktop: "screen and (min-width: 1024px) and (max-width: 1279px)";
+$biggerDesktop: "screen and (min-width: 1280px)";
+$menuNormal: "screen and (min-width: 768px)";
+
+@mixin center-vertical {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin basicTransition {
+	transition: all 0.5s;
+}
+
+@mixin bottomShadow {
+	box-shadow: 0 0 5px $basicBackgroundColor;
+}
+
+@mixin sectionMainFeatures($background, $padding: 50px) {
+	padding: $padding 0;
+	background: $background;
+	text-align: center;
+}
+
+@mixin iconCircle($fontSize, $borderColor, $color: $basicTextColor) {
+	font-size: $fontSize;
+	line-height: $fontSize;
+	text-align: center;
+	padding: 8px;
+	border: solid 2px $borderColor;
+	border-radius: 50%; 
+	display: inline-block;
+	color: $color;
+}
+
+@mixin right {
+	float: right;
+}

@@ -1,0 +1,48 @@
+$mainfont: 'Open Sans', sans-serif;
+$secondaryFont: 'Roboto', sans-serif;
+
+$basicFontSize: 15px;
+$menuFontSize: 1rem;
+$basicLineHeight: 1.5rem;
+$paragraphMargin: 0 0 15px;
+
+body {
+	font-family: $mainfont;
+	font-size: $basicFontSize;
+	color: $basicTextColor
+}
+
+p {
+	line-height: $basicLineHeight;
+	margin: $paragraphMargin;
+}
+
+@mixin sectionHeader($size, $color: $basicTextColor) {
+	color: $color;
+	font-size: $size;
+	text-transform: uppercase;
+}
+
+h2 {
+	@include sectionHeader(2rem);
+}
+
+h3 {
+	@include sectionHeader(1.5rem);
+}
+
+h4 {
+	@include sectionHeader(1.3rem);
+	font-weight: normal;
+}
+
+
+h2.sectionTitle {
+	display: inline-block;
+	padding: 0 20px 10px;
+	border-bottom: solid 2px $basicTextColor;
+}
+
+h2.sectionTitle + p {
+	padding-top: 40px;
+}

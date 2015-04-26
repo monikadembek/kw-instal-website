@@ -1,0 +1,59 @@
+$offset: 2%;
+
+.row {
+  box-sizing: border-box;
+  font-size: 0;
+  margin: 20px 0;
+}
+
+.row .column {
+  display: inline-block;
+  margin-right: $offset;
+  font-size: 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.row .column:last-child {
+  margin-right: 0;
+}
+
+.full {
+  width: 100%;
+}
+
+.oneHalf {
+  width: (100%-$offset)/2;
+}
+
+.oneThird {
+  width: (100%-(2*$offset))/3;
+}
+
+.oneFourth {
+  width: (100%-(3*$offset))/4;
+}
+
+.oneFifth {
+  width: (100%-(4*$offset))/5;
+}
+
+.oneSixth {
+  width: (100%-(5*$offset))/6;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .oneFourth, .oneFifth, .oneSixth {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .column {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 0.7rem;
+  }
+}

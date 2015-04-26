@@ -1,0 +1,70 @@
+body  {
+
+}
+
+a:focus { 
+	outline:none; /*usuwanie niebieskiej obwódki w FF*/
+}
+
+#kontener {
+	border: 1px solid #4b5673;
+	margin: 70px auto 40px auto;
+	width: 520px;
+}
+
+
+#formularz {
+	margin: 40px auto;
+	width: 250px;
+}
+
+#formularz div {
+	margin: 0px 0px 20px 0px;
+}
+
+#formularz label {
+	display: block;
+}
+
+#formularz textarea {
+	background: #292f3f;
+	border: 1px solid #4b5673;
+	color: #ffffff;
+	width: 250px;
+}
+
+#formularz input[type=text] {
+	background: #292f3f;
+	padding: 5px;
+	border: 1px solid #4b5673;
+	color: #ffffff;
+	width: 240px;
+}
+
+#blad {
+	background: #5c2b3a;	
+	border: 1px dashed #8b1f29;
+	margin: 20px;
+	padding: 10px;
+}
+
+#blad p{
+	padding: 0px;
+	margin: 0px;
+}
+
+#sukces {
+	background: #346130;	
+	border: 1px dashed #399d0c;
+	margin: 20px;
+	padding: 10px;
+}
+
+#sukces p{
+	padding: 0px;
+	margin: 0px;
+}
+
+.red {
+	color: #8b1f29;
+}

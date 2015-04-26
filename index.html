@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>KW INSTAL - instalacje cieplne i sanitarne</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  <!-- font awesome-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700,400&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  
+  <!-- main css -->
+  <link rel="stylesheet" href="style/main.css">
+  <!-- bxSlider CSS file -->
+  <link href="style/jquery.bxslider.css" rel="stylesheet" />
+
+  <!-- jquery -->
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!-- mobile menu slick nav plugin-->
+  <script src="js/jquery.slicknav.min.js"></script>  
+  <!-- bxSlider Javascript file -->
+  <script src="js/jquery.bxslider.min.js"></script>
+  <!-- images loaded script -->
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <!-- lightbox -->
+
+
+  <!-- google maps script -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    var map;
+    function initialize() {
+      var mapOptions = {
+        center: new google.maps.LatLng(53.1072193,17.9908335),
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+      map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(53.1072193,17.9908335),
+        map: map,
+        title: "KW-INSTAL Krzysztof Woźniak, 85-135 Bydgoszcz, ul. Bielicka 76c/2"
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+</head>
+<body>
+
+  <!-- header section -->
+  <header>
+    <!-- logo -->
+  	<div class="container">
+  		<div class="logo">
+  			<a href="index.html"><img src="images/logo.png" alt="logo kw instal"></a>
+  		</div>
+  	</div>
+    
+    <!-- top bar with phone -->
+
+    <div class="headerPhoneNumberBar">
+      <div class="container"><i class="fa fa-phone"></i> 518 097 054</div>
+    </div>
+  
+    <!-- navigation bar -->
+    <nav>
+      <div class="container">
+        <div class="mainMenuContent">
+          <!--<div class="menuMobileIcon" id="mobile-menu"><i class="fa fa-bars"></i></div>-->
+          <ul id="my-main-menu">
+            <li><a href="#about">O firmie</a></li>
+            <li><a href="#services">Usługi</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#testimonials">Referencje</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="attach-mobile-menu"></div>  
+    </nav>
+	</header>
+
+
+  <div class="content"> <!--all content below fixed nav bar-->
+
+    <!--section with main slider  -->
+    <div class="topSlider">
+      <ul class="bxslider" id="main-slider">
+        <!-- slider1 -->
+        <li>
+          <div class="mainSlide1">
+            <div class="container">
+              <div class="mainSliderContent">
+                <h2><span>Instalacje</span></h2>
+                <h2><span>Grzewcze i sanitarne</span></h2>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- slider2 -->
+        <li>
+          <div class="mainSlide2">
+            <div class="container">
+              <div class="mainSliderContent">
+                <h2><span>Węzły</span></h2>
+                <h2><span>cieplne</span></h2>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- slider3 -->
+        <li>
+          <div class="mainSlide3">
+            <div class="container">
+              <div class="mainSliderContent">
+                <h2><span>Usługi</span></h2>
+                <h2><span>spawalnicze</span></h2>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- about section -->
+    <div id="about">
+      <div class="container">
+        <h2 class="sectionTitle">O firmie</h2>
+        <p>Firma KW-INSTAL funkcjonuje na rynku od 2010 roku świadcząc usługi instalacyjne i spawalnicze.</p>
+        <p>Wykonujemy instalacje centralnego ogrzewania, wodno-kanalizacyjne i gazowe.</p>
+        <p>Specjalizujemy się w montażu jedno i wielofunkcyjnych węzłów cieplnych.</p>
+        <p>Realizujemy również prace związane ze spawaniem rur stalowych oraz demontażem rurociągów i konstrukcji stalowych.</p>
+      </div>
+    </div>
+
+    <!-- section with our services -->
+    <div id="services">
+      <div class="container">
+        <h2 class="sectionTitle">Usługi</h2>
+        <div class="row">
+        <div class="column oneHalf">
+          <ul>
+            <li><i class="fa fa-check topListLevel"></i>Instalacje
+              <ul>
+                <li><i class="fa fa-check-square-o"></i>centralnego ogrzewania</li>
+                <li><i class="fa fa-check-square-o"></i>wodno-kanalizacyjne</li>
+                <li><i class="fa fa-check-square-o"></i>gazowe</li>
+              </ul>
+            </li>
+
+            <li><i class="fa fa-check topListLevel"></i><p>Węzły cieplne<br> jedno i wielofunkcyjne</p>
+              <ul>
+                <li><i class="fa fa-check-square-o"></i>projekt</li>
+                <li><i class="fa fa-check-square-o"></i>kompleksowy montaż</li>
+                <li><i class="fa fa-check-square-o"></i>automatyka</li>
+                <li><i class="fa fa-check-square-o"></i>izolacja</li>
+                <li><i class="fa fa-check-square-o"></i>podłączenie do sieci i instalacji</li>
+              </ul>
+            </li> 
+          </ul>
+        </div>  <!-- end of single col -->
+
+        <div class="column oneHalf">
+          <ul>
+            <li><i class="fa fa-check topListLevel"></i>Kotłownie
+              <ul>
+                <li><i class="fa fa-check-square-o"></i>olejowe</li>
+                <li><i class="fa fa-check-square-o"></i>gazowe</li>
+                <li><i class="fa fa-check-square-o"></i>na paliwo stałe</li>
+              </ul>
+            </li>
+
+            <li><i class="fa fa-check topListLevel"></i>Spawanie rur stalowych</li> 
+            <li><i class="fa fa-check topListLevel"></i>Spawanie aluminium</li> 
+            <li><i class="fa fa-check topListLevel"></i><p>Demontaże <br/>konstrukcji stalowych<br> i rurociągów</p></li> 
+            <li><i class="fa fa-check topListLevel"></i>Sieci cieplne i sanitarne</li>
+          </ul>
+        </div> <!-- end of single col -->
+        </div>
+      </div> <!-- end of container div-->
+    </div> <!--end of services setion-->
+
+    <!-- gallery section -->
+    <div id="gallery">
+      <div class="container">
+        <h2 class="sectionTitle">Galeria</h2>
+        <ul>
+          <li><a href="images/gallery/1.jpg" class="lightboxTrigger"><img src="images/gallery/1.jpg" alt="foto 1"></a></li>
+          <li><a href="images/gallery/2.jpg" class="lightboxTrigger"><img src="images/gallery/2.jpg" alt="foto 2"></a></li>
+          <li><a href="images/gallery/3.jpg" class="lightboxTrigger"><img src="images/gallery/3.jpg" alt="foto 3"></a></li>
+          <li><a href="images/gallery/4.jpg" class="lightboxTrigger"><img src="images/gallery/4.jpg" alt="foto 4"></a></li>
+          <li><a href="images/gallery/5.jpg" class="lightboxTrigger"><img src="images/gallery/5.jpg" alt="foto 5"></a></li>
+          <li><a href="images/gallery/6.jpg" class="lightboxTrigger"><img src="images/gallery/6.jpg" alt="foto 6"></a></li>
+          <li><a href="images/gallery/7.jpg" class="lightboxTrigger"><img src="images/gallery/7thumb.jpg" alt="foto 7"></a></li>
+          <li><a href="images/gallery/8.jpg" class="lightboxTrigger"><img src="images/gallery/8.jpg" alt="foto 8"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- testimonials section -->
+    <div id="testimonials">
+      <div class="container">
+        <h2 class="sectionTitle">Referencje</h2>
+        <p>Dlaczego warto skorzystać z naszych usług</p>
+        <div class="opinionsContent">
+          <ul class="bxslider" id="opinions-slider">
+            <li>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea consectetur dolorem,
+              enim explicabo necessitatibus, eius, dolores iure corporis adipisci tempora voluptatibus officia.</p>
+              <h4>Zadowolony klient nr1</h4>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea consectetur dolorem,
+              enim explicabo necessitatibus, eius, dolores iure corporis adipisci tempora voluptatibus officia.</p>
+              <h4>Zadowolony klient nr2</h4>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea consectetur dolorem,
+              enim explicabo necessitatibus, eius, dolores iure corporis adipisci tempora voluptatibus officia.</p>
+              <h4>Zadowolony klient nr3</h4>
+            </li>
+          </ul>
+        </div> <!--opinionsContent div-->
+      </div> <!--end of container-->
+    </div> <!--end of testimonials section-->    
+
+
+    <!--pseudo parallax effect-->
+    <div id="parallax-effect">
+      <div class="parallaxInnerContent">
+          <div class="container">
+            <h2>Zapraszamy</h2>
+            <h3>do współpracy z nami</h3>
+          </div>
+      </div>
+    </div>
+
+
+    <!-- contact section -->
+    <div id="contact">
+      <div class="container">
+        <h2 class="sectionTitle">Kontakt</h2>
+        <div class="row">
+          <div class="column oneHalf">
+            <div class="contactInfo">
+              <div>
+                <p>KW-INSTAL Krzysztof Woźniak</p>
+                <p>Zamość, ul. Sosnowa 9<br/>
+                    89-200 Szubin</p>
+              </div>
+              <div>
+              <p>Biuro<br>
+                ul. Bielicka 76c/2<br>
+                85-135 Bydgoszcz<br>
+                <a href="mailto:biuro@kw-instal.pl">biuro@kw-instal.pl</a></p>
+              </div>
+              <div>
+                <p>Iwona Woźniak<br>
+                tel. 517 416 555<br>
+                <a href="mailto:iwona.wozniak@kwinstal.pl">iwona.wozniak@kw-instal.pl</a></p>
+              </div>
+              <div>
+                <p>Krzysztof Woźniak<br>
+                  tel. 518 097 054</p>
+              </div>
+              <div>
+                <p>NIP: 562 141 70 87<br>
+                    REGON: 340802696</p>
+              </div>
+            </div> <!--end of contact info div-->
+          </div> <!--end of column onehalf div-->
+
+          <div class="column oneHalf">
+            
+            <form action="sendMail.php" method="post" id="form">
+              <fieldset>
+              <div>
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name">
+              </div>
+             <div>
+                <label for="phone">Nr telefonu:</label>
+                <input type="tel" id="phone" name="phone">
+              </div>              
+              <div>
+                <label for="mail">Adres e-mail:</label>
+                <input type="email" id="mail" name="mail">
+              </div>
+              <div>
+                <label for="topic">Temat:</label>
+                <input type="text" id="topic" name="topic">
+              </div>
+              <div>
+                <label for="message">Treść:</label>
+                <textarea rows="9" id="message" name="message"></textarea>
+              </div>
+              <div>
+                <p>Nr tel. jest opcjonalny, resztę pól wypełnij</p>
+              </div>
+              <div>
+                <input type="submit" value="Wyślij" />
+              </div>
+              </fieldset>
+            </form>
+
+          </div> <!--end of div class column oneHalf-->
+        </div> <!--end of div class row-->
+      </div> <!--end of div class container-->
+    </div> <!--end of section contact-->
+
+
+    <!-- google maps section -->
+    <div id="map">
+      
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <i class="fa fa-copyright"></i>KW Instal 2015
+        <a href="mailto:biuro@kw-instal.pl"><i class="fa fa-envelope footerIcon"></i></a>
+        <a href="http://facebook.com"><i class="fa fa-facebook-official footerIcon"></i></a>
+      </div>
+    </footer>
+  
+  </div> <!--end of div content-->
+
+<script>
+  $(document).ready(function(){
+
+    //menu mobile slicknav plugin
+    $('#my-main-menu').slicknav({
+      prependTo: '#attach-mobile-menu',
+      label: ''
+    });
+
+
+    //lightbox script - code that makes the lightbox appear on clicked photo
+    $('.lightboxTrigger').click(function(e) {
+
+      //prevent default action for hyperlink
+      e.preventDefault();
+
+      //get clicked link href attribute
+      var imageHref = $(this).attr("href");
+
+      /*if lightbox window html already exists change the src to match the href attribute of a photo that was clicked
+      if lightbox window html doesn't exist it will create the necessary markup
+      it happens only for the first time
+      */
+
+      if ($('#lightbox').length > 0) { //#lightbox exists
+        
+        //insert img tag with clicked href as src value
+        $('#content').html('<img src="'+imageHref+'" />');
+
+        //show lightbox window
+        $('#lightbox').show();
+      }
+      else { //if #lightbox doesn't exist
+        //create html markup for lightbox window
+        var lightbox = '<div id="lightbox">'+
+                          '<p>Kliknij gdziekolwiek żeby zamknąć</p>'+
+                          '<div id="content">'+
+                            '<img src="'+ imageHref +'"/>'+
+                          '<div>'+
+                        '</div>';
+        //insert lightbox html into page
+        $('body').append(lightbox);
+      }
+    });
+
+    //checks for the click anywhere on the page to hide lightbox photo
+    $('body').on('click', '#lightbox', function() {
+        $('#lightbox').hide();
+    });
+
+
+    //slider with references - bxslider 
+    $('#opinions-slider').bxSlider({
+      mode: 'vertical',
+      auto: true,
+      controls: false,
+      pager: true
+    });
+
+    //smooth scrolling from menu to sections
+    $('a[href^="#"]').on('click', function(event) {
+
+      var target = $( $(this).attr('href') );
+
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: target.offset().top-80
+          }, 500);
+      }
+
+    });
+
+    //menu mobile
+    /*
+    $('#mobile-menu').click(function(){
+      $('nav ul li').css("display","block");
+      $('nav ul').slideToggle('slow',function(){
+       // $('nav ul li').css("display","block");
+        $('nav ul a').click(function(){
+          $('nav ul li').fadeOut();
+        });
+      });  
+    });
+*/    
+
+  });
+
+  $('.content').imagesLoaded(function(){
+
+    //main slider bxslider 
+    $('#main-slider').bxSlider({
+      mode: 'fade',
+      auto: true,
+      controls: true,
+      pager: false
+    });
+
+  });
+
+
+</script>
+
+</body>
+</html>

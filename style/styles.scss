@@ -1,0 +1,486 @@
+body {
+	background: $basicBackgroundColor;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.content {
+	padding-top: 100px;
+}
+
+
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    z-index: 50;
+    img {
+      width: 175px;
+      height: auto;
+      border: solid 1px $basicTextColor;
+    }
+  }
+  .headerPhoneNumberBar{
+    height: 50px;
+    background: $basicBackgroundColor;
+    color: $basicTextColor;
+    text-align: right;
+    font-size: $menuFontSize
+  }
+  .headerPhoneNumberBar .container {
+    @include center-vertical;
+  }
+}
+
+
+
+nav {
+	height: 50px; 
+	background: $basicTextColor;
+	text-align: right;
+	@include bottomShadow;
+  /*
+  .menuMobileIcon {
+    //position: fixed;
+    //top: 0px;
+    //right: 0px;
+    display: inline-block;
+    margin-top: 40px;
+    cursor: pointer;
+    i {
+      font-size: 1rem;
+      padding: 5px;
+      border: solid 2px $basicBackgroundColor;
+      color: $basicBackgroundColor;
+    }
+    &:hover i{
+      color: $accentColor;
+      border: solid 2px $accentColor;
+    }
+    @media #{$menuNormal} {
+      display: none;
+    }
+  } */
+/*
+  ul {
+    padding-top: 40px;
+    li {
+      display: none;
+      background: $basicTextColor;
+      //width: 100%;
+        a {
+          display: inline-block;
+          font-family: $secondaryFont;
+          font-weight: 400;
+          font-size: $menuFontSize;
+          padding: 0px 10px 10px 0;
+          color: $basicBackgroundColor;
+          @include basicTransition;
+          &:hover {
+            color: $logoColor;
+          }
+        }
+      }
+    @media #{$menuNormal} {
+      padding-top: 0px;
+      li {
+        display: inline-block;
+        background: none;
+        a {
+          padding: 0 0 0 15px;
+        }
+      }
+    }
+  } */
+}
+
+nav .container {
+	@include center-vertical;
+}
+
+#my-main-menu {
+  display: none;
+  li {
+    display: inline-block;
+    a {
+      display: inline-block;
+      font-family: $secondaryFont;
+      font-weight: 400;
+      font-size: $menuFontSize;
+      padding: 0 0 0 15px;
+      color: $basicBackgroundColor;
+      @include basicTransition;
+      &:hover {
+        color: $logoColor;
+      }
+    }
+  } 
+  @media #{$menuNormal} {
+    display: inline-block;
+  }
+}
+
+.slicknav_menu {
+  ul {
+    @include bottomShadow;
+  }
+  @media #{$menuNormal} {
+    display: none;
+  }
+}
+
+.topSlider {
+  height: 475px;
+  width: 100%;
+}
+
+.bxslider {
+	.mainSlide1 {
+    background: url('../images/slajd1.jpg') no-repeat;
+  }
+  .mainSlide2 {
+    background: url('../images/slajd2.jpg') no-repeat;
+  }
+  .mainSlide3 {
+    background: url('../images/slajd3.jpg') no-repeat;
+  }
+  .mainSlide1, .mainSlide2, .mainSlide3 {
+    background-size: cover;
+    background-position: -250px 0;
+    height: 475px;
+    @media #{$menuNormal} {
+      background-position: 0 0;
+    }
+  }
+}
+
+.mainSliderContent {
+  position: relative;
+  z-index: 1;
+  float: right;
+  padding: 180px 0;
+  h2 {
+    color: $accentColor;
+    font-weight: 700;
+    font-family: $secondaryFont;
+    font-size: 2rem;
+    span {
+      display: inline-block;
+      background: $basicTextColor;
+      padding: 5px 20px;
+      margin: 0 50px 20px 0;
+    }
+    @media #{$tablet} {
+      font-size: 2.5rem;
+    }
+
+    @media #{$desktop} {
+      font-size: 3rem;
+    }
+
+    @media #{$biggerDesktop} {
+      font-size: 3rem;
+    }
+  }
+
+}
+
+#about {
+	@include sectionMainFeatures($basicBackgroundColor);
+}
+
+#services {
+	@include sectionMainFeatures($accentColor);
+	.column {
+    display: block;
+    width: 100%;
+    padding-left: 60px;
+    @media #{$desktop} {
+      display: inline-block;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 49%;
+    }
+    @media #{$biggerDesktop} {
+      display: inline-block;
+      padding-left: 80px;
+      padding-right: 80px;
+      width: 49%;
+    }
+
+  }
+  ul {
+		text-align: left;
+		font-weight: normal;
+	}
+	li {
+		padding-top: 40px;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+    i {
+      margin-right: 10px;
+    }
+		i.topListLevel {
+      @include iconCircle(15px,$basicTextColor);
+		}
+    p {
+      display: inline-block;
+      vertical-align: top;
+    }
+		ul {
+			li {
+        padding-top: 25px;
+				padding-left: 40px;
+				text-transform: lowercase;
+				font-size: 1rem;
+				line-height: 1.2rem;
+			}
+		}
+	}
+
+}
+
+
+#gallery {
+	@include sectionMainFeatures($basicBackgroundColor);
+  font-size: 0;
+  ul {
+    padding: 50px 0 40px;
+    li {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid $accentColor;
+        padding: 8px;
+      }
+      @media #{$tablet} {
+        width: 50%;
+      }
+      @media #{$desktop} {
+        width: 25%;
+      }  
+      @media #{$biggerDesktop} {
+        width: 25%;
+      }          
+    }
+  }
+}
+
+#testimonials {
+	@include sectionMainFeatures($accentColor);
+  .opinionsContent {
+    border: solid 1px $basicTextColor;
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 50px 0 30px;
+    p {
+      font-style: italic;
+      font-size: 1rem;
+    }
+    h4 {
+      color: rgba(255,255,255,0.7);
+    }
+  }
+}
+
+// .bx-viewport {
+//   min-height: 130px;
+// }
+
+#parallax-effect {
+  background: url('../images/parallax.jpg') 0 0 fixed;
+  text-align: center;
+  .parallaxInnerContent {
+    position: relative;
+    &:after {
+      //dark overlay
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: none repeat 0 0 rgba(0, 0, 0, 0.7);
+    }
+    .container {
+      padding: 150px 0;
+      position: relative;
+      z-index: 1;
+      h2 {
+        display: inline-block;
+        color: $accentColor;
+        background: $basicTextColor;
+        padding: 5px 16px;
+        font-weight: 700;
+        font-family: $secondaryFont;
+        font-size: 2.5rem;
+        width: auto;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+}
+
+#contact {
+	@include sectionMainFeatures($basicBackgroundColor);
+  .column {
+    padding: 30px 0;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    @media #{$desktop} {
+      display: inline-block;
+      width: 50%;
+    }
+    @media #{$biggerDesktop} {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+  .contactInfo {
+    display: inline-block;
+    text-align: left;;
+    margin: 0 auto;
+    p {
+      padding: 0 0 13px;
+    }
+    a {
+      color: $basicTextColor;
+      border-bottom: dashed 1px $basicTextColor; 
+      padding-bottom: 2px;
+      @include basicTransition;
+      &:hover {
+        color: $accentColor;
+        border-bottom: dashed 1px $accentColor;
+      }
+    }
+  }
+}
+
+#form {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  label {
+    display: block;
+    padding: 0 0 5px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  input {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+  }
+  input[type=submit] {
+    width: 100px;
+    padding: 5px 10px;
+    background: $basicBackgroundColor;
+    color: $basicTextColor;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+  }
+  textarea {
+    display: block;
+    width: 300px;
+    @media #{$biggerDesktop} {
+      width: 400px;
+    }
+  }
+  fieldset {
+    background: $accentColor;
+    border: 1px solid $basicTextColor;
+    padding: 20px 40px 10px;
+  }
+  p {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}
+
+
+#map {
+	width: 100%;
+	height: 500px;
+
+}
+
+footer {
+	background: $basicBackgroundColor;
+	height: 80px;
+	width: 100%;
+  .footerIcon {
+    @include center-vertical;
+    @include right;
+    margin: 8px 0 0 20px;
+    @include iconCircle(1rem, $basicTextColor);
+    opacity: 0.5;
+    @include basicTransition;
+    &:hover {
+        opacity: 1;
+    }
+  }
+}
+
+footer {
+  .container {
+    @include center-vertical;
+  }
+}
+
+//lightbox gallery
+#lightbox {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+
+  p {
+    text-align: right;
+    color: $basicTextColor;
+    margin-right: 20px;
+  }
+  img {
+    margin: 20px auto;
+    //@include center-vertical;
+    border: 2px solid $accentColor;
+    box-shadow: 0 0 25px $basicBackgroundColor;
+    -webkit-box-shadow: 0 0 25px $basicBackgroundColor;
+    -moz-box-shadow: 0 0 25px $basicBackgroundColor;
+    max-width: 940px;
+  }
+}
